@@ -20,7 +20,9 @@ for i in range(total):
 	p = ' '
 	c = ' '
 	
-	f = open(str.format('article{}', i), 'w')
+	name = str.format('article{}', i)
+	f = open(name, 'w')
+	print ('Generating file', name)
 	
 	for j in range(sizeInByte):
 		c = alpha[random.randint(0, alphaLen)]
@@ -30,3 +32,4 @@ for i in range(total):
 		p = c
 	
 	f.close()
+	print ('Generating file', name, '- done')
