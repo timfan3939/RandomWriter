@@ -20,6 +20,8 @@ for i in range(total):
 	p = ' '
 	c = ' '
 	
+	buff = ''
+	
 	name = str.format('article{}', i)
 	f = open(name, 'w')
 	print ('Generating file', name)
@@ -28,8 +30,8 @@ for i in range(total):
 		c = alpha[random.randint(0, alphaLen)]
 		while p == ' ' and p == c:
 			c = alpha[random.randint(0, alphaLen)]
-		f.write(c)
+		buff += c
 		p = c
-	
+	f.write(buff)	
 	f.close()
 	print ('Generating file', name, '- done')
